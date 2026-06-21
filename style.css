@@ -1,0 +1,302 @@
+/* Yazı Tipi Entegrasyonu */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a; /* Şık Derin Gece Mavisi */
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HERO / HAKKIMDA BÖLÜMÜ */
+.hero {
+    padding: 100px 0 70px 0;
+    border-bottom: 1px solid #1e293b;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.hero .subtitle {
+    font-size: 1.25rem;
+    color: #38bdf8; /* Vurgu Mavisi */
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.hero .bio {
+    max-width: 750px;
+    margin: 0 auto 35px auto;
+    color: #94a3b8;
+    font-size: 1.1rem;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: #38bdf8;
+}
+
+/* PROJELER ALANI */
+.projects-section {
+    padding: 70px 0;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 45px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #38bdf8;
+    border-radius: 2px;
+}
+
+/* 34 PROJENİN DÜZGÜN SIRALANMASI İÇİN ESNEK GRID SİSTEMİ */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 20px -10px rgba(56, 189, 248, 0.2);
+}
+
+.project-image img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.project-content {
+    padding: 25px;
+}
+
+.project-content h3 {
+    color: #ffffff;
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.project-content p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    height: 72px; /* Kartların aynı boyda kalması için satır sınırlama */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.tags {
+    margin-bottom: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    background-color: #0f172a;
+    color: #38bdf8;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.95rem;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+.site-footer {
+    text-align: center;
+    padding: 45px 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    border-top: 1px solid #1e293b;
+    margin-top: 50px;
+}
+
+/* Mobil Ekranlar İçin Tam Uyumluluk */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.3rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+}
+/* İLETİŞİM ALANI TASARIMI */
+.contact-section {
+    padding: 70px 0;
+    border-top: 1px solid #1e293b;
+    background-color: #0b111e; /* Biraz daha koyu bir arka plan vurgusu */
+}
+
+.contact-subtitle {
+    color: #94a3b8;
+    margin-bottom: 40px;
+    font-size: 1.05rem;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+}
+
+/* İletişim Bilgileri (Sol) */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-item i {
+    font-size: 2rem;
+    color: #38bdf8;
+    background-color: #1e293b;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+}
+
+.info-item h3 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.info-item p, .info-item a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.info-item a:hover {
+    color: #38bdf8;
+}
+
+/* İletişim Formu (Sağ) */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 16px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+}
+
+.submit-btn {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border: none;
+    padding: 16px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover {
+    background-color: #7dd3fc;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+/* Mobil Ekran Uyumluluğu */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .submit-btn {
+        width: 100%; /* Mobilde buton tam genişlik kaplasın */
+    }
+}

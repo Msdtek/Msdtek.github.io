@@ -1,219 +1,159 @@
-<!DOCTYPE HTML>
-<!--
-	Portfolio by Msdtek
-	A personal portfolio website
--->
-<html>
-	<head>
-		<title>Msdtek - Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Sadık Tekbaş | Portfolyo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Modern İkonlar İçin Remix Icon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
 
-			<!-- Header -->
-				<section id="header" class="wrapper">
+    <!-- HERO / HAKKIMDA BÖLÜMÜ -->
+    <header class="hero">
+        <div class="container">
+            <h1>Muhammed Sadık Tekbaş</h1>
+            <p class="subtitle">Bilgisayar Mühendisliği Öğrencisi & Geliştirici</p>
+            <p class="bio">
+                Yapay zeka, makine öğrenmesi, mobil oyun geliştirme ve siber güvenlik teknolojileri üzerine odaklanarak yenilikçi çözümler üretiyorum. Yazılım dünyasındaki serüvenimi ve geliştirdiğim tüm projeleri aşağıda inceleyebilirsiniz.
+            </p>
+            <div class="social-links">
+                <a href="https://github.com/Msdtek" target="_blank"><i class="ri-github-fill"></i> GitHub</a>
+                <a href="#" target="_blank"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
+            </div>
+        </div>
+    </header>
 
-					<!-- Logo -->
-						<div id="logo">
-							<h1><a href="index.html">Msdtek</a></h1>
-							<p>Software Developer & Tech Enthusiast</p>
-						</div>
+    <!-- PROJELER BÖLÜMÜ -->
+    <main class="projects-section">
+        <div class="container">
+            <h2 class="section-title">Projelerim</h2>
+            
+            <div class="projects-grid">
+                
+                <!-- PROJE 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project1.jpg" alt="Proje Önizleme" onerror="this.src='https://via.placeholder.com/400x220/1e293b/fff?text=Proje+Görseli'">
+                    </div>
+                    <div class="project-content">
+                        <h3>Yapay Zeka Destekli Karaciğer Kanseri Tespiti</h3>
+                        <p>Derin öğrenme modelleri kullanarak tıbbi görüntüler üzerinden HCC tespiti yapan, teknik altyapısında TensorFlow ve Keras barındıran platform projesi.</p>
+                        <div class="tags">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>AI/ML</span>
+                        </div>
+                        <a href="https://github.com/Msdtek" class="project-link" target="_blank">Kodları İncele <i class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                </div>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="index.html">Home</a></li>
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</nav>
+                <!-- PROJE 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project2.jpg" alt="Proje Önizleme" onerror="this.src='https://via.placeholder.com/400x220/1e293b/fff?text=Proje+Görseli'">
+                    </div>
+                    <div class="project-content">
+                        <h3>Football Quiz Mobile Game</h3>
+                        <p>Unity ve C# ile sıfırdan geliştirilen, Google Play Console üzerinde test aşamasına getirilmiş dinamik bir mobil bilgi yarışması oyunu.</p>
+                        <div class="tags">
+                            <span>Unity</span>
+                            <span>C#</span>
+                            <span>Mobile Game</span>
+                        </div>
+                        <a href="https://github.com/Msdtek" class="project-link" target="_blank">Kodları İncele <i class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                </div>
 
-				</section>
+                <!-- PROJE 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project3.jpg" alt="Proje Önizleme" onerror="this.src='https://via.placeholder.com/400x220/1e293b/fff?text=Proje+Görseli'">
+                    </div>
+                    <div class="project-content">
+                        <h3>Akıllı Sera Otomasyon Sistemi</h3>
+                        <p>Arduino tabanlı, bitkilerin nem ve sıcaklık oranlarını takip ederek otomatik sulama gerçekleştiren laboratuvar projesi.</p>
+                        <div class="tags">
+                            <span>Arduino</span>
+                            <span>C++</span>
+                            <span>IoT</span>
+                        </div>
+                        <a href="https://github.com/Msdtek" class="project-link" target="_blank">Kodları İncele <i class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                </div>
 
-			<!-- Intro -->
-				<section id="intro" class="wrapper style1">
-					<div class="title">Welcome</div>
-					<div class="container">
-						<p class="style1">Hi, I'm Msdtek</p>
-						<p class="style2">
-							A passionate developer building innovative solutions<br class="mobile-hide" />
-							and exploring new technologies
-						</p>
-						<p class="style3">I specialize in creating web applications, solving complex problems, and continuously learning. Check out my recent projects below!</p>
-						<ul class="actions">
-							<li><a href="#projects" class="button style3 large">View My Work</a></li>
-						</ul>
-					</div>
-				</section>
+                <!-- ⚠️ BURADAN SONRASINI KOPYALAYARAK DİĞER PROJELERİNİZİ EKLEYEBİLİRSİNİZ -->
+                <!-- PROJE 4 (ŞABLON) -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/project4.jpg" alt="Proje Önizleme" onerror="this.src='https://via.placeholder.com/400x220/1e293b/fff?text=Proje+Görseli'">
+                    </div>
+                    <div class="project-content">
+                        <h3>Projenizin Adı</h3>
+                        <p>Buraya projenizin ne işe yaradığını, hangi problemi çözdüğünü belirten kısa bir açıklama yazısı ekleyin.</p>
+                        <div class="tags">
+                            <span>Teknoloji1</span>
+                            <span>Teknoloji2</span>
+                        </div>
+                        <a href="https://github.com/Msdtek" class="project-link" target="_blank">Kodları İncele <i class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                </div>
+                <!-- ŞABLON SONU -->
 
-			<!-- Projects -->
-				<section id="projects" class="wrapper style2">
-					<div class="title">My Projects</div>
-					<div class="container">
+            </div>
+        </div>
+    </main>
+    <!-- İLETİŞİM BÖLÜMÜ -->
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">İletişime Geç</h2>
+            <p class="contact-subtitle">Bir proje fikriniz mi var veya iş birliği mi yapmak istiyorsunuz? Bana mesaj gönderebilirsiniz.</p>
+            
+            <div class="contact-wrapper">
+                <!-- Sol Taraf: İletişim Bilgileri -->
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="ri-mail-send-line"></i>
+                        <div>
+                            <h3>E-posta</h3>
+                            <p><a href="mailto:muhammedsadiktekbas@gmail.com">muhammedsadiktekbas@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="ri-map-pin-line"></i>
+                        <div>
+                            <h3>Konum</h3>
+                            <p>İstanbul, Türkiye</p>
+                        </div>
+                    </div>
+                </div>
 
-						<!-- Features -->
-							<section id="features">
-								<div class="feature-list">
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3>Project One</h3>
-												<p>Description of your first project. Explain what problem it solves, what technologies you used, and what you learned from building it.</p>
-												<ul class="actions">
-													<li><a href="#" class="button style1 small">Learn More</a></li>
-												</ul>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3>Project Two</h3>
-												<p>Description of your second project. Highlight the key features, technologies, and your role in the project. Add links to GitHub or live demos.</p>
-												<ul class="actions">
-													<li><a href="#" class="button style1 small">Learn More</a></li>
-												</ul>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3>Project Three</h3>
-												<p>Description of your third project. Describe the challenges you faced and how you overcame them. Share metrics or achievements if applicable.</p>
-												<ul class="actions">
-													<li><a href="#" class="button style1 small">Learn More</a></li>
-												</ul>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3>Project Four</h3>
-												<p>Description of your fourth project. Explain the impact of your work and what technologies or methodologies you applied to create it.</p>
-												<ul class="actions">
-													<li><a href="#" class="button style1 small">Learn More</a></li>
-												</ul>
-											</section>
-										</div>
-										<div class="col-6 col-12-medium">
-											<section>
-												<h3>Project Five</h3>
-												<p>Description of your fifth project. Include details about collaboration, innovation, and any open-source contributions or notable features.</p>
-												<ul class="actions">
-													<li><a href="#" class="button style1 small">Learn More</a></li>
-												</ul>
-											</section>
-										</div>
-									</div>
-								</div>
-							</section>
+                <!-- Sağ Taraf: Çalışan İletişim Formu -->
+                <!-- Web3Forms veya Formspree'den aldığınız anahtarı (Access Key) aşağıdaki value kısmına yapıştırın -->
+                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                    <input type="hidden" name="access_key" value="BURAYA_ALDIĞINIZ_ANAHTARI_YAZIN">
+                    
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Adınız Soyadınız" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="E-posta Adresiniz" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" rows="5" placeholder="Mesajınız" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Mesaj Gönder <i class="ri-send-plane-fill"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-					</div>
-				</section>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Msdtek. Tüm Hakları Saklıdır.</p>
+    </footer>
 
-			<!-- About -->
-				<section id="about" class="wrapper style3">
-					<div class="title">About Me</div>
-					<div class="container">
-						<div class="row aln-center">
-							<div class="col-8 col-12-medium">
-								<section class="highlight">
-									<h3>Who I Am</h3>
-									<p>I'm a software developer passionate about creating elegant solutions to complex problems. With experience in full-stack development, I enjoy working on projects that make an impact. I'm always eager to learn new technologies and collaborate with talented teams.</p>
-									<h3>My Skills</h3>
-									<p><strong>Languages:</strong> JavaScript, Python, Java, HTML, CSS<br />
-									<strong>Frameworks:</strong> React, Node.js, Django<br />
-									<strong>Tools:</strong> Git, Docker, AWS, Firebase<br />
-									<strong>Other:</strong> RESTful APIs, Database Design, Agile Methodology</p>
-									<h3>Experience</h3>
-									<p>I have worked on various projects ranging from personal side projects to collaborative team efforts. My experience includes building web applications, API development, and mentoring junior developers.</p>
-								</section>
-							</div>
-						</div>
-					</div>
-				</section>
-
-			<!-- Contact -->
-				<section id="contact" class="wrapper">
-					<div class="title">Get In Touch</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-6 col-12-medium">
-
-								<!-- Contact Form -->
-									<section>
-										<h3>Send me a message</h3>
-										<form method="post" action="#">
-											<div class="row gtr-50">
-												<div class="col-6 col-12-small">
-													<input type="text" name="name" id="contact-name" placeholder="Your Name" />
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="text" name="email" id="contact-email" placeholder="Your Email" />
-												</div>
-												<div class="col-12">
-													<textarea name="message" id="contact-message" placeholder="Your Message" rows="4"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" class="style1" value="Send" /></li>
-														<li><input type="reset" class="style2" value="Clear" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
-
-							</div>
-							<div class="col-6 col-12-medium">
-
-								<!-- Contact Info -->
-									<section class="feature-list small">
-										<div class="row">
-											<div class="col-12">
-												<section>
-													<h3 class="icon solid fa-envelope">Email</h3>
-													<p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
-												</section>
-											</div>
-											<div class="col-12">
-												<section>
-													<h3 class="icon solid fa-phone">Phone</h3>
-													<p><a href="tel:+1234567890">(123) 456-7890</a></p>
-												</section>
-											</div>
-											<div class="col-12">
-												<section>
-													<h3 class="icon solid fa-globe">Social Media</h3>
-													<p>
-														<a href="https://github.com/Msdtek" target="_blank">GitHub</a><br />
-														<a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a><br />
-														<a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
-													</p>
-												</section>
-											</div>
-										</div>
-									</section>
-
-							</div>
-						</div>
-						<div id="copyright">
-							<ul>
-								<li>&copy; 2026 Msdtek.</li><li>All rights reserved.</li>
-							</ul>
-						</div>
-					</div>
-				</section>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
