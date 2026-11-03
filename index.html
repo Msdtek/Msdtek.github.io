@@ -1,249 +1,711 @@
-﻿<!DOCTYPE html>
-<html lang="tr">
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammed Sadık Tekbaş | Portfolyo</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Muhammed Sadık Tekbaş — Portfolyo</title>
+    <meta name="description" content="Muhammed Sadık Tekbaş. Bilgisayar mühendisliği öğrencisi; yapay zeka, bilgisayarlı görü ve mobil oyun projeleri.">
+    
+    <!-- Font: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Remix Icon -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="hero">
-        <div class="container">
-            <h1>Muhammed Sadık Tekbaş</h1>
-            <p class="subtitle">Bilgisayar Mühendisliği Öğrencisi & Geliştirici</p>
-            <p class="bio">
-                Yapay zeka, makine öğrenmesi, mobil oyun geliştirme ve siber güvenlik teknolojileri üzerine odaklanarak yenilikçi çözümler üretiyorum. Yazılım dünyasındaki serüvenimi ve geliştirdiğim tüm projeleri aşağıda inceleyebilirsiniz.
-            </p>
-            <div class="social-links">
-                <a href="https://github.com/Msdtek" target="_blank"><i class="ri-github-fill"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/muhammed-sad%C4%B1k-tekba%C5%9F-4314b9359/" target="_blank"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
-                <a href="Muhammed_Sadik_Tekbas_CV.pdf" download class="cv-btn"><i class="ri-file-download-line"></i> CV İndir</a>
-            </div>
+    <!-- Navigasyon (Sade, Ferah & Hızlı) -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#home" class="brand-name">
+                Muhammed Sadık Tekbaş
+            </a>
+
+            <nav class="main-nav">
+                <a href="#projects" class="nav-item">Projeler</a>
+                <a href="#about" class="nav-item">Hakkımda</a>
+                <a href="#contact" class="nav-item">İletişim</a>
+                <a href="Muhammed_Sadik_Tekbas_CV.pdf" download class="nav-cv-link">
+                    CV <i class="ri-arrow-down-line"></i>
+                </a>
+                
+                <button class="theme-toggle" id="theme-toggle" title="Temayı Değiştir" aria-label="Temayı Değiştir">
+                    <i class="ri-moon-line" id="theme-icon"></i>
+                </button>
+            </nav>
         </div>
     </header>
 
-    <main class="projects-section">
-        <div class="container">
-            <h2 class="section-title">Projelerim</h2>
-            
-            <div class="projects-grid">
+    <main>
+        <!-- Hero Bölümü (Büyük, Cesur & Güncel Bilgiler) -->
+        <section class="hero-section" id="home">
+            <div class="content-container">
+                <div class="hero-top-bar">
+                    <span class="hero-meta">İstanbul, TR • Bilgisayar Mühendisliği 4. Sınıf</span>
+                </div>
                 
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project1.jpg" alt="HCC Projesi" onerror="this.src='https://via.placeholder.com/400x220/1e293b/fff?text=Medikal+Yapay+Zeka'">
-                    </div>
-                    <div class="project-content">
-                        <h3>Hibrit Medikal Yapay Zeka Platformu</h3>
-                        <p>Karaciğer tümörlerini (HCC) saptayan ve Google Gemini VLM ile otomatik klinik rapor üreten uçtan uca AI projesi.</p>
-                        <div class="tags">
-                            <span>Python</span><span>U-Net</span><span>VLM</span><span>FastAPI</span>
-                        </div>
-                        <button class="project-link modal-btn" data-modal="modal1">Detayları İncele <i class="ri-arrow-right-line"></i></button>
+                <h1 class="hero-statement">
+                    Yapay zeka modelleri eğitiyor, Unity ile mobil ve PC için bağımsız oyunlar geliştiriyorum.
+                </h1>
+
+                <div class="hero-footer-row">
+                    <p class="hero-subtext">
+                        Google Play'de 2 adet kapalı betada oyunum bulunuyor. Stajımda medikal yapay zeka (HCC tümör tespiti & LLM raporlama) üzerine çalıştım; hedefim projelerimi 5-6 ay içinde Steam ve Play Store'da son kullanıcıya sunmak.
+                    </p>
+
+                    <div class="hero-links">
+                        <a href="#projects" class="pill-btn primary-pill">
+                            Projelerimi İncele <i class="ri-arrow-down-line"></i>
+                        </a>
+                        <a href="#contact" class="pill-btn secondary-pill">
+                            İletişime Geç <i class="ri-arrow-right-line"></i>
+                        </a>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project2.jpg" alt="Football Quiz" onerror="this.src='https://via.placeholder.com/400x220/1e293b/fff?text=Football+Quiz+Game'">
-                    </div>
-                    <div class="project-content">
-                        <h3>Football Quiz Mobile Game</h3>
-                        <p>Unity ile geliştirilen, futbolcu verilerini dinamik olarak çeken ve Google Play kapalı beta testleri yürütülen mobil oyun.</p>
-                        <div class="tags">
-                            <span>Unity</span><span>C#</span><span>Web Scraping</span>
-                        </div>
-                        <button class="project-link modal-btn" data-modal="modal2">Detayları İncele <i class="ri-arrow-right-line"></i></button>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project3.jpg" alt="Akıllı Sera" onerror="this.src='https://via.placeholder.com/400x220/1e293b/fff?text=IoT+Otomasyon'">
-                    </div>
-                    <div class="project-content">
-                        <h3>Akıllı Sera Otomasyon Sistemi</h3>
-                        <p>Arduino tabanlı, sensör verilerini işleyerek otonom sulama gerçekleştiren donanım mimarisi.</p>
-                        <div class="tags">
-                            <span>Arduino</span><span>C/C++</span><span>IoT</span>
-                        </div>
-                        <button class="project-link modal-btn" data-modal="modal3">Detayları İncele <i class="ri-arrow-right-line"></i></button>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="images/project4.jpg" alt="Maske Tanıma" onerror="this.src='https://via.placeholder.com/400x220/1e293b/fff?text=Maske+Tanıma'">
-                    </div>
-                    <div class="project-content">
-                        <h3>Gerçek Zamanlı Maske Tanıma</h3>
-                        <p>Canlı kamera akışı üzerinden OpenCV ve TensorFlow ile gerçek zamanlı yüz ve maske tespiti yapan yapay zeka sistemi.</p>
-                        <div class="tags">
-                            <span>Python</span><span>OpenCV</span><span>TensorFlow</span>
-                        </div>
-                        <button class="project-link modal-btn" data-modal="modal4">Detayları İncele <i class="ri-arrow-right-line"></i></button>
-                    </div>
-                </div>
-
             </div>
-        </div>
+        </section>
+
+        <!-- Projeler Vitrini (GÜNCEL & GERÇEK PROJELER) -->
+        <section class="projects-section" id="projects">
+            <div class="content-container">
+                <div class="section-title-row">
+                    <h2 class="large-title">Seçilmiş Projeler</h2>
+                    <span class="count-badge">05 Proje</span>
+                </div>
+
+                <div class="work-showcase">
+                    
+                    <!-- Proje 01: Football Quiz & Google Play Beta Oyunları -->
+                    <article class="work-item" data-modal="modal-game">
+                        <div class="work-media">
+                            <img src="images/project2.jpg" alt="Football Quiz Mobil Oyun Ekranı" loading="lazy">
+                            <div class="work-tag-float">Unity • Mobil Oyun</div>
+                            <span class="beta-status-tag">Kapalı Betada</span>
+                        </div>
+                        <div class="work-meta">
+                            <div>
+                                <div class="work-header">
+                                    <span class="work-index">01</span>
+                                    <h3 class="work-title">Football Quiz Mobile Game</h3>
+                                </div>
+                                <p class="work-desc">
+                                    Unity ile geliştirilen, futbolcu istatistiklerini otomatik web kazıma ile soru havuzuna dönüştüren mobil trivia oyunu. Google Play'de kapalı betada olan 2 oyunumdan biri; 5-6 ay içinde genel çıkışa hazırlanıyor.
+                                </p>
+                                
+                                <div class="beta-callout">
+                                    <i class="ri-flask-line"></i>
+                                    <span><strong>Test Etmek İster Misiniz?</strong> Google Play beta grubuma katılmak isterseniz bana mesaj atmanız yeterli.</span>
+                                </div>
+                            </div>
+
+                            <div class="work-bottom">
+                                <div class="tags-list">
+                                    <span>Unity 3D</span>
+                                    <span>C#</span>
+                                    <span>Web Scraping</span>
+                                    <span>Google Play Beta</span>
+                                </div>
+                                <button class="view-project-btn modal-trigger" data-modal="modal-game">
+                                    Ekranları Gör <i class="ri-arrow-right-up-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proje 02: 2048 Matrix Puzzle (2. Kapalı Beta Oyunu) -->
+                    <article class="work-item" data-modal="modal-2048">
+                        <div class="work-media">
+                            <img src="images/game_2048_1.png" alt="2048 Matrix Puzzle Oyun Ekranı" loading="lazy">
+                            <div class="work-tag-float">Unity • 2D Matris</div>
+                            <span class="beta-status-tag">Kapalı Betada (2. Oyun)</span>
+                        </div>
+                        <div class="work-meta">
+                            <div>
+                                <div class="work-header">
+                                    <span class="work-index">02</span>
+                                    <h3 class="work-title">2048 Matrix Puzzle Mobile Game</h3>
+                                </div>
+                                <p class="work-desc">
+                                    2 boyutlu matris algoritmalarında (grid yönetimi, tile birleştirme ve kaydırma mekaniği) uzmanlaşmak ve Google Play Console yayınlama/kapalı beta süreçlerini uçtan uca öğrenmek amacıyla Unity ile geliştirdiğim 2. mobil oyunum.
+                                </p>
+                                
+                                <div class="beta-callout">
+                                    <i class="ri-flask-line"></i>
+                                    <span><strong>Test Etmek İster Misiniz?</strong> Google Play kapalı beta test grubuma katılmak isterseniz bana mesaj atmanız yeterli.</span>
+                                </div>
+                            </div>
+
+                            <div class="work-bottom">
+                                <div class="tags-list">
+                                    <span>Unity 2D</span>
+                                    <span>C#</span>
+                                    <span>Matris Algoritması</span>
+                                    <span>Play Console Beta</span>
+                                </div>
+                                <button class="view-project-btn modal-trigger" data-modal="modal-2048">
+                                    Ekranları Gör <i class="ri-arrow-right-up-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proje 03: Medikal AI (Staj Projesi) -->
+                    <article class="work-item" data-modal="modal-ai">
+                        <div class="work-media">
+                            <img src="images/medical_ai.jpg" alt="Medikal AI Karaciğer Segmentasyonu" loading="lazy">
+                            <div class="work-tag-float">Staj Projesi • Yapay Zeka</div>
+                        </div>
+                        <div class="work-meta">
+                            <div>
+                                <div class="work-header">
+                                    <span class="work-index">03</span>
+                                    <h3 class="work-title">Hibrit Medikal Yapay Zeka & LLM Platformu</h3>
+                                </div>
+                                <p class="work-desc">
+                                    Staj dönemimde geliştirilmesinde bizzat yer aldığım platform. Ana sorumluluğum MR taramalarından HCC (Karaciğer Kanseri) tespiti modelinin eğitilmesi, segmentasyon ve LLM entegrasyonu ile otomatik klinik raporlama mimarisiydi.
+                                </p>
+                            </div>
+
+                            <div class="work-bottom">
+                                <div class="tags-list">
+                                    <span>Python</span>
+                                    <span>MR Segmentasyon</span>
+                                    <span>HCC Tespiti</span>
+                                    <span>LLM / VLM</span>
+                                </div>
+                                <button class="view-project-btn modal-trigger" data-modal="modal-ai">
+                                    Mimarisi & Detaylar <i class="ri-arrow-right-up-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proje 04: Maske Tanıma -->
+                    <article class="work-item" data-modal="modal-mask">
+                        <div class="work-media">
+                            <img src="images/mask1.jpg" alt="Gerçek Zamanlı Maske Tanıma" loading="lazy">
+                            <div class="work-tag-float">Görüntü İşleme • OpenCV</div>
+                        </div>
+                        <div class="work-meta">
+                            <div>
+                                <div class="work-header">
+                                    <span class="work-index">04</span>
+                                    <h3 class="work-title">Gerçek Zamanlı Yüz & Maske Tanıma</h3>
+                                </div>
+                                <p class="work-desc">
+                                    Canlı kamera akışından insan yüzlerini OpenCV ile tespit ederek, eğitilen derin öğrenme (CNN) modeliyle kişilerin maske takıp takmadığını yüksek doğrulukla canlı analiz eden bilgisayarlı görü projesi.
+                                </p>
+                            </div>
+
+                            <div class="work-bottom">
+                                <div class="tags-list">
+                                    <span>Python</span>
+                                    <span>OpenCV</span>
+                                    <span>TensorFlow</span>
+                                    <span>CNN</span>
+                                </div>
+                                <button class="view-project-btn modal-trigger" data-modal="modal-mask">
+                                    Ekranları Gör <i class="ri-arrow-right-up-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Proje 05: Akıllı Sera ve Otomatik Sulama -->
+                    <article class="work-item" data-modal="modal-arduino">
+                        <div class="work-media">
+                            <img src="images/arduino1.jpg" alt="Akıllı Sera ve Otomasyon Devresi" loading="lazy">
+                            <div class="work-tag-float">IoT • Gömülü Sistemler</div>
+                        </div>
+                        <div class="work-meta">
+                            <div>
+                                <div class="work-header">
+                                    <span class="work-index">05</span>
+                                    <h3 class="work-title">Akıllı Sera & Otomatik Sulama Sistemi</h3>
+                                </div>
+                                <p class="work-desc">
+                                    Toprak nemi ve sıcaklık sensörlerinden okunan verileri mikrodenetleyici düzeyinde analiz ederek röle üzerinden su motorunu ve soğutmayı otonom devreye alan Arduino tabanlı donanım mimarisi.
+                                </p>
+                            </div>
+
+                            <div class="work-bottom">
+                                <div class="tags-list">
+                                    <span>Arduino Uno</span>
+                                    <span>C / C++</span>
+                                    <span>Sensör Kalibrasyonu</span>
+                                    <span>Röle Kontrolü</span>
+                                </div>
+                                <button class="view-project-btn modal-trigger" data-modal="modal-arduino">
+                                    Devre Görselleri <i class="ri-arrow-right-up-line"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Hakkımda & Yaklaşım (GERÇEK & GÜNCEL BİYOGRAFİ) -->
+        <section class="about-section" id="about">
+            <div class="content-container">
+                <div class="about-split">
+                    <div class="about-headline">
+                        <span class="section-label">Hakkımda</span>
+                        <h2 class="medium-title">Yapay zeka modellerinden bağımsız oyun geliştirmeye.</h2>
+                    </div>
+
+                    <div class="about-body">
+                        <p>
+                            Bilgisayar Mühendisliği 4. sınıf öğrencisiyim. Yazılım serüvenimde en çok keyif aldığım iki ana alan var: derin öğrenme / yapay zeka modelleri eğitmek ve Unity ile bağımsız oyunlar üretmek.
+                        </p>
+                        <p>
+                            Staj dönemimde kurumsal bir medikal yapay zeka projesinin çekirdek ekibinde yer aldım. Buradaki ana görevim, MR taramalarından karaciğer tümörlerini (HCC) tespit eden segmentasyon modelinin eğitimi, LLM entegrasyonu ve otomatik klinik raporlama mimarisinin kurulmasıydı. Şu anda ise üniversite bitirme projemiz olarak arkadaşlarımla birlikte yapay zeka ile üretilmiş sahte videoları tespit eden bir mobil uygulama geliştiriyoruz.
+                        </p>
+                        <p>
+                            Oyun geliştirme tarafında Unity üzerinde 4-5 adet çalışan oynanabilir demo ürettim ve şu an Google Play Store'da kapalı betada 2 adet aktif oyunum bulunuyor. Temel hedefim; önümüzdeki 5-6 ay içerisinde oyunlarımı Steam ve Play Store üzerinden küresel pazara ve son kullanıcıya sunmak.
+                        </p>
+
+                        <!-- Araçlar & Teknolojiler -->
+                        <div class="tools-compact">
+                            <span class="tools-title">Aktif Kullandığım Teknolojiler:</span>
+                            <div class="tools-flow">
+                                <strong>Oyun Geliştirme:</strong> Unity 3D, C#, Oyun Döngüsü, Google Play Console, Steamworks Hazırlığı • 
+                                <strong>Yapay Zeka & Veri:</strong> Python, U-Net, PyTorch/TensorFlow, LLM & VLM Entegrasyonu, OpenCV, Web Scraping • 
+                                <strong>Araçlar:</strong> Git & GitHub, FastAPI, Linux, VS Code
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- İletişim (Spencer Gabor Tarzı Büyük & Net) -->
+        <section class="contact-section" id="contact">
+            <div class="content-container">
+                <div class="contact-banner">
+                    <span class="section-label">İletişime Geçin</span>
+                    <h2 class="big-cta-text">Birlikte bir şeyler inşa edelim.</h2>
+                    <p class="contact-lead">
+                        Staj, iş birliği veya Football Quiz beta testine katılmak için mesaj bırakabilir ya da doğrudan e-posta atabilirsiniz.
+                    </p>
+
+                    <!-- E-posta ve Sosyal Butonlar Yan Yana -->
+                    <div class="contact-direct-row">
+                        <div class="big-email-container">
+                            <span class="big-email" id="big-email">msadik.tekbas@gmail.com</span>
+                            <button class="copy-action-btn" id="copy-btn" title="Kopyala">
+                                <i class="ri-file-copy-line" id="copy-icon"></i>
+                                <span id="copy-text">Kopyala</span>
+                            </button>
+                        </div>
+
+                        <div class="contact-social-pills">
+                            <a href="https://github.com/Msdtek" target="_blank" rel="noopener noreferrer" class="contact-pill-link">
+                                <i class="ri-github-fill"></i> GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/muhammed-sad%C4%B1k-tekba%C5%9F-4314b9359/" target="_blank" rel="noopener noreferrer" class="contact-pill-link">
+                                <i class="ri-linkedin-box-fill"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Hızlı Form -->
+                    <form id="contact-form" class="minimal-contact-form">
+                        <input type="hidden" name="access_key" value="75398941-4574-466c-8cad-ccf3b1475b65">
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Adınız" required>
+                            <input type="email" name="email" placeholder="E-posta Adresiniz" required>
+                        </div>
+                        <textarea id="contact-message" name="message" rows="3" placeholder="Mesajınız veya Football Quiz test talebiniz..." required></textarea>
+                        
+                        <div class="form-submit-row">
+                            <button type="submit" class="pill-btn primary-pill" id="form-submit-btn">
+                                <span>Mesajı Gönder</span> <i class="ri-send-plane-fill"></i>
+                            </button>
+                            <span class="form-feedback" id="form-feedback"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <section class="contact-section">
-        <div class="container">
-            <h2 class="section-title">İletişime Geç</h2>
-            <p class="contact-subtitle">Bir proje fikriniz mi var veya iş birliği mi yapmak istiyorsunuz? Bana mesaj gönderebilirsiniz.</p>
-            
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="ri-mail-send-line"></i>
-                        <div>
-                            <h3>E-posta</h3>
-                            <p><a href="mailto:msadik.tekbas@gmail.com">msadik.tekbas@gmail.com</a></p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="ri-map-pin-line"></i>
-                        <div>
-                            <h3>Konum</h3>
-                            <p>İstanbul, Türkiye</p>
-                        </div>
-                    </div>
-                </div>
-
-                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
-                    <input type="hidden" name="access_key" value="75398941-4574-466c-8cad-ccf3b1475b65">
-                    
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Adınız Soyadınız" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="E-posta Adresiniz" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" rows="5" placeholder="Mesajınız" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Mesaj Gönder <i class="ri-send-plane-fill"></i></button>
-                </form>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="content-container footer-inner">
+            <div class="footer-left">
+                <span>&copy; 2026 Muhammed Sadık Tekbaş</span>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/Msdtek" target="_blank" rel="noopener noreferrer"><i class="ri-github-fill"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/muhammed-sad%C4%B1k-tekba%C5%9F-4314b9359/" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-box-fill"></i> LinkedIn</a>
+                <a href="Muhammed_Sadik_Tekbas_CV.pdf" download>CV İndir</a>
+                <a href="#home" class="back-link">Başa Dön ↑</a>
             </div>
         </div>
-    </section>
-
-    <footer class="site-footer">
-        <p>&copy; 2026 Msdtek. Tüm Hakları Saklıdır.</p>
     </footer>
 
-    <div id="modal1" class="modal-window">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Hibrit Medikal Yapay Zeka Platformu</h2>
-            <div class="modal-gallery">
-                <img src="images/ai_model1.jpg" alt="Model Eğitimi">
-                <img src="images/ai_model2.jpg" alt="Rapor Ekranı">
+    <!-- ==============================================================
+         MODAL GALERİLERİ (GÖRSELLER KIRPILMADAN, NET ŞEKİLDE AÇILIR)
+         ============================================================== -->
+
+    <!-- Modal 1: Football Quiz & Google Play Betaları -->
+    <div id="modal-game" class="project-modal">
+        <div class="modal-card">
+            <button class="modal-close" aria-label="Kapat">&times;</button>
+            <div class="modal-top">
+                <span class="modal-sub">Mobil Oyun & Unity</span>
+                <h3>Football Quiz Mobile Game</h3>
             </div>
+
+            <div class="modal-beta-notice">
+                <i class="ri-user-star-line"></i>
+                <p><strong>Kapalı Beta Süreci:</strong> Google Play Store'da kapalı betada olan 2 oyunumdan biridir. Denemek ve test kullanıcısı olmak isterseniz aşağıdaki butona tıklayıp Gmail adresinizi iletmeniz yeterli.</p>
+            </div>
+
+            <div class="modal-gallery phone-grid">
+                <div class="gallery-card">
+                    <img src="images/game1.jpg" alt="Oyun İçi Ekran" class="zoomable-img">
+                    <span>Oyun İçi Soru & Skor Ekranı</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="images/game2.jpg" alt="Google Play Console Ekranı" class="zoomable-img">
+                    <span>Google Play Console Beta Paneli</span>
+                </div>
+            </div>
+
             <div class="modal-text">
-                <h3>Proje Özeti</h3>
-                <p>MR ve Ultrason görüntülerini analiz ederek karaciğer tümörlerini tespit eden ve elde edilen verileri Büyük Dil/Görüntü Modelleri (VLM) ile yorumlayarak otomatik klinik raporlar üreten web tabanlı bir platformdur.</p>
-                <h3>Projeye Katkım ve Sorumluluklarım</h3>
-                <ul>
-                    <li><strong>Model Eğitimi:</strong> U-Net ve nnU-Net mimarilerini kullanarak medikal görüntü ön işleme ve segmentasyon modellerinin eğitilmesi.</li>
-                    <li><strong>GenAI Entegrasyonu:</strong> "Few-Shot Prompting" teknikleri kullanılarak Google Gemini VLM modelinin sisteme entegre edilmesi.</li>
-                    <li><strong>Backend & API:</strong> FastAPI ve SQLite kullanılarak kullanıcı kimlik doğrulama sistemlerinin kodlanması.</li>
+                <h4>Proje Hakkında</h4>
+                <p>
+                    Unity motoru ve C# ile geliştirilmiş, futbol dünyasından verileri dinamik soru havuzuna dönüştüren mobil trivia oyunu. Python BeautifulSoup ile transfer ve futbolcu istatistikleri kazınarak JSON formatında oyuna entegre edildi. 5-6 ay içinde genel kullanıcıya sunulması hedefleniyor.
+                </p>
+                <h4>Teknik Katkılarım</h4>
+                <ul class="bullet-list">
+                    <li>Unity UI araçları ve C# ile oyun döngüsü, can sistemi ve zamanlayıcı mekanikleri kodlandı.</li>
+                    <li>Python web scraping araçlarıyla güncel futbol verileri otomatik çekilip veri tabanına bağlandı.</li>
+                    <li>Google Play Developer Console üzerinden kapalı beta test süreçleri ve kullanıcı izinleri yönetiliyor.</li>
+                </ul>
+                <div class="modal-action-bar">
+                    <a href="#contact" class="pill-btn primary-pill modal-beta-join-btn" data-game="Football Quiz">
+                        <i class="ri-flask-line"></i> Teste Katılmak İstiyorum
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: 2048 Matrix Puzzle (2. Kapalı Beta Oyunu) -->
+    <div id="modal-2048" class="project-modal">
+        <div class="modal-card">
+            <button class="modal-close" aria-label="Kapat">&times;</button>
+            <div class="modal-top">
+                <span class="modal-sub">Unity • 2D Matris Oyunu</span>
+                <h3>2048 Matrix Puzzle Mobile Game</h3>
+            </div>
+
+            <div class="modal-beta-notice">
+                <i class="ri-user-star-line"></i>
+                <p><strong>2. Kapalı Beta Oyunum:</strong> Google Play Console üzerinde kapalı betada olan 2. oyunumdur. Test kullanıcısı olup denemek isterseniz aşağıdaki butona basıp Gmail adresinizi iletebilirsiniz.</p>
+            </div>
+
+            <div class="modal-gallery phone-grid">
+                <div class="gallery-card">
+                    <img src="images/game_2048_1.png" alt="2048 Ekran 1" class="zoomable-img">
+                </div>
+                <div class="gallery-card">
+                    <img src="images/game_2048_2.png" alt="2048 Ekran 2" class="zoomable-img">
+                </div>
+                <div class="gallery-card">
+                    <img src="images/game_2048_3.png" alt="2048 Ekran 3" class="zoomable-img">
+                </div>
+                <div class="gallery-card">
+                    <img src="images/game_2048_4.png" alt="2048 Ekran 4" class="zoomable-img">
+                </div>
+            </div>
+
+            <div class="modal-text">
+                <h4>Proje Amacı & Neler Öğrendim?</h4>
+                <p>
+                    Bu projeyi iki temel amaç doğrultusunda sıfırdan geliştirdim:
+                </p>
+                <ul class="bullet-list">
+                    <li><strong>2D Matris Algoritmaları:</strong> Kendimi 2 boyutlu grid/matris tabanlı oyun mantığında geliştirmek, karoların dinamik kaydırılması ve sayısal birleşme algoritmalarında uzmanlaşmak.</li>
+                    <li><strong>Google Play Yayınlama Süreci:</strong> Bir mobil oyunun Google Play Store'a yüklenme adımlarını (Keystore imzalama, hedef kitle analizleri, gizlilik politikası ve 14 günlük kapalı beta test süreçlerinin tüm gereksinimlerini) uçtan uca öğrenip deneyimlemek.</li>
+                    <li><strong>Akıcı UI & Animasyon:</strong> Unity UI araçlarıyla karoların yumuşak birleşme animasyonları, hamle takip sistemi ve en yüksek skor (Best Score) kayıt mekanizması programlandı.</li>
+                </ul>
+                <div class="modal-action-bar">
+                    <a href="#contact" class="pill-btn primary-pill modal-beta-join-btn" data-game="2048 Matrix Puzzle">
+                        <i class="ri-flask-line"></i> 2048 Betasına Katılmak İstiyorum
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Medikal AI (Staj Projesi) -->
+    <div id="modal-ai" class="project-modal">
+        <div class="modal-card">
+            <button class="modal-close" aria-label="Kapat">&times;</button>
+            <div class="modal-top">
+                <span class="modal-sub">Staj Projesi • Yapay Zeka</span>
+                <h3>Hibrit Medikal Yapay Zeka & LLM Platformu</h3>
+            </div>
+
+            <div class="modal-gallery wide-grid">
+                <div class="gallery-card">
+                    <img src="images/medical_ai.jpg" alt="Medikal AI Segmentasyon Arayüzü" class="zoomable-img">
+                    <span>MR Taramalarında HCC Tümör Segmentasyonu ve LLM Rapor Çıktısı</span>
+                </div>
+            </div>
+
+            <div class="modal-text">
+                <h4>Proje Hakkında</h4>
+                <p>
+                    Staj dönemimde çekirdek geliştirme ekibinde yer aldığım endüstriyel yapay zeka projesi. MR taramalarında karaciğer lezyonlarını saptayarak hekimler için teşhis ve klinik raporlama sürecini otomatikleştiren web tabanlı bir karar destek platformudur.
+                </p>
+                <h4>Projedeki Ana Sorumluluklarım & Katkılarım</h4>
+                <ul class="bullet-list">
+                    <li><strong>Ana Görev:</strong> MR taramalarından karaciğer tümörlerinin (HCC) yüksek doğrulukla tespiti ve segmentasyonu için U-Net derin öğrenme modelinin eğitilmesi.</li>
+                    <li><strong>LLM Entegrasyonu:</strong> Elde edilen segmentasyon verilerinin ve tümör koordinatlarının LLM / VLM modellerine aktarılarak doktorlar için otomatik klinik tanı raporu üretilmesi.</li>
+                    <li><strong>Model Eğitimi & API:</strong> Medikal görüntü ön işleme, model optimizasyonu ve FastAPI ile uç noktaların yapılandırılması.</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div id="modal2" class="modal-window">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Football Quiz Mobile Game</h2>
-            <div class="modal-gallery">
-                <img src="images/game1.jpg" alt="Oyun İçi">
-                <img src="images/game2.jpg" alt="Play Console">
+    <!-- Modal 3: Gerçek Zamanlı Maske Tanıma -->
+    <div id="modal-mask" class="project-modal">
+        <div class="modal-card">
+            <button class="modal-close" aria-label="Kapat">&times;</button>
+            <div class="modal-top">
+                <span class="modal-sub">Görüntü İşleme • OpenCV</span>
+                <h3>Gerçek Zamanlı Yüz & Maske Tanıma</h3>
             </div>
+
+            <div class="modal-gallery duo-grid">
+                <div class="gallery-card">
+                    <img src="images/mask1.jpg" alt="Maskeli Tespit" class="zoomable-img">
+                    <span>Maske Tespiti (Yeşil Sınırlayıcı Kutu)</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="images/mask2.jpg" alt="Maskesiz Yüz Tespiti" class="zoomable-img">
+                    <span>Maskesiz Yüz Tespiti (Kırmızı Uyarı)</span>
+                </div>
+            </div>
+
             <div class="modal-text">
-                <h3>Proje Özeti</h3>
-                <p>Unity motoru ile sıfırdan tasarlanan, oyunculara futbol dünyası hakkında dinamik sorular sunan mobil bilgi yarışması oyunudur.</p>
-                <h3>Projeye Katkım ve Sorumluluklarım</h3>
-                <ul>
-                    <li><strong>Oyun Geliştirme:</strong> Unity ve C# kullanılarak skor sistemleri ve oyun döngüsünün programlanması.</li>
-                    <li><strong>Veri Madenciliği:</strong> Python ve BeautifulSoup kullanılarak futbolcu istatistiklerinin kazınması (web scraping).</li>
-                    <li><strong>Yayın Süreci:</strong> Google Play Console üzerinde kapalı beta test süreçlerinin yönetilmesi.</li>
+                <h4>Proje Hakkında</h4>
+                <p>
+                    Canlı kamera veya video akışından gelen kareleri gerçek zamanlı tarayarak insan yüzlerini çerçeveleyen ve eğitilen konvolüsyonel sinir ağı (CNN) ile kişilerin tıbbi maske takıp takmadığını yüksek kare hızında (FPS) sınıflandıran Python projesidir.
+                </p>
+                <h4>Teknik Katkılarım</h4>
+                <ul class="bullet-list">
+                    <li>OpenCV Haar Cascades mimarisi ile canlı video akışında yüz bölgeleri anlık normalize edildi.</li>
+                    <li>TensorFlow ve Keras kullanılarak maskeli ve maskesiz veri setinde derin öğrenme (CNN) modeli eğitildi.</li>
+                    <li>Model tahmini canlı video üzerinde renkli sınırlayıcı kutular ve güven skoruyla görselleştirildi.</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div id="modal3" class="modal-window">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Akıllı Sera & Otomatik Sulama</h2>
-            <div class="modal-gallery">
-                <img src="images/arduino1.jpg" alt="Devre Şeması">
-                <img src="images/arduino2.jpg" alt="Sistem Çalışırken">
+    <!-- Modal 4: Akıllı Sera & Otomatik Sulama -->
+    <div id="modal-arduino" class="project-modal">
+        <div class="modal-card">
+            <button class="modal-close" aria-label="Kapat">&times;</button>
+            <div class="modal-top">
+                <span class="modal-sub">Gömülü Sistemler • IoT</span>
+                <h3>Akıllı Sera & Otomatik Sulama Sistemi</h3>
             </div>
+
+            <div class="modal-gallery duo-grid">
+                <div class="gallery-card">
+                    <img src="images/arduino1.jpg" alt="Arduino Devre Bağlantıları" class="zoomable-img">
+                    <span>Fiziksel Devre, LCD ve Sensör Bağlantıları</span>
+                </div>
+                <div class="gallery-card">
+                    <img src="images/arduino2.jpg" alt="Çalışan Sistem" class="zoomable-img">
+                    <span>Röle, Fan ve Sıvı Pompası Kontrol Devresi</span>
+                </div>
+            </div>
+
             <div class="modal-text">
-                <h3>Proje Özeti</h3>
-                <p>Çevresel faktörleri analiz ederek su pompasını otonom bir şekilde devreye sokan mikrodenetleyici projesidir.</p>
-                <h3>Projeye Katkım ve Sorumluluklarım</h3>
-                <ul>
-                    <li><strong>Donanım Kurulumu:</strong> Arduino Uno, sensörler ve motor sürücünün fiziksel olarak kurulması.</li>
-                    <li><strong>Gömülü Yazılım:</strong> C/C++ ile sensör verilerinin okunması ve su motorunu tetikleyecek algoritmanın yazılması.</li>
+                <h4>Proje Hakkında</h4>
+                <p>
+                    Toprak nemi ve sıcaklık gibi çevresel verileri anlık analiz ederek bitkinin ihtiyacı olduğunda röle üzerinden su motorunu ve soğutma fanını otonom olarak devreye sokan mikrodenetleyici tabanlı donanım mimarisidir.
+                </p>
+                <h4>Teknik Katkılarım</h4>
+                <ul class="bullet-list">
+                    <li>Arduino Uno, toprak nem sensörü, sıcaklık sensörü ve LCD ekran fiziksel olarak devreye kuruldu.</li>
+                    <li>C/C++ ile sensör kalibrasyonu, eşik değer analizi ve pompa koruma döngüleri programlandı.</li>
+                    <li>Sistem parametreleri anlık olarak LCD ekranda gösterilerek otonom iklimlendirme sağlandı.</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <div id="modal4" class="modal-window">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>Gerçek Zamanlı Maske Tanıma Uygulaması</h2>
-            <div class="modal-gallery">
-                <img src="images/mask1.jpg" alt="Maske Tespiti">
-                <img src="images/mask2.jpg" alt="Yüz Tespiti">
-            </div>
-            <div class="modal-text">
-                <h3>Proje Özeti</h3>
-                <p>Canlı kamera akışı üzerinden insan yüzlerini tespit ederek maske analizini eş zamanlı yapan yapay zeka projesidir.</p>
-                <h3>Projeye Katkım ve Sorumluluklarım</h3>
-                <ul>
-                    <li><strong>Görüntü İşleme:</strong> OpenCV Haar Cascades ile yüz çerçevelerinin çıkarılması.</li>
-                    <li><strong>Yapay Zeka Modeli:</strong> TensorFlow ile ikili sınıflandırma modelinin eğitilmesi.</li>
-                </ul>
-            </div>
-        </div>
+    <!-- Fotoğraf Büyütme Lightbox (Zoom Overlay) -->
+    <div id="lightbox" class="lightbox-overlay">
+        <button class="lightbox-close">&times;</button>
+        <img id="lightbox-img" src="" alt="Tam Boy Görünüm">
     </div>
 
+    <!-- Scriptler -->
     <script>
-        const modalBtns = document.querySelectorAll('.modal-btn');
-        const modals = document.querySelectorAll('.modal-window');
-        const closeBtns = document.querySelectorAll('.close-btn');
+        // 1. Tema Değiştirici (Light / Dark)
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const html = document.documentElement;
 
-        modalBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const modalId = btn.getAttribute('data-modal');
-                document.getElementById(modalId).style.display = 'block';
-                document.body.style.overflow = 'hidden'; 
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        themeIcon.className = savedTheme === 'dark' ? 'ri-sun-line' : 'ri-moon-line';
+
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            themeIcon.className = next === 'dark' ? 'ri-sun-line' : 'ri-moon-line';
+        });
+
+        // 2. Modallar
+        const modalTriggers = document.querySelectorAll('.modal-trigger, .work-item');
+        const modals = document.querySelectorAll('.project-modal');
+        const modalCloses = document.querySelectorAll('.modal-close');
+
+        modalTriggers.forEach(el => {
+            el.addEventListener('click', (e) => {
+                if (e.target.closest('a')) return;
+                const modalId = el.getAttribute('data-modal');
+                const targetModal = document.getElementById(modalId);
+                if (targetModal) {
+                    targetModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
             });
         });
 
-        closeBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                modals.forEach(modal => modal.style.display = 'none');
-                document.body.style.overflow = 'auto'; 
+        const closeModals = () => {
+            modals.forEach(m => m.classList.remove('active'));
+            document.body.style.overflow = 'auto';
+        };
+
+        modalCloses.forEach(btn => btn.addEventListener('click', closeModals));
+        modals.forEach(m => {
+            m.addEventListener('click', (e) => {
+                if (e.target === m) closeModals();
             });
         });
 
-        window.addEventListener('click', (e) => {
-            if (e.target.classList.contains('modal-window')) {
-                e.target.style.display = 'none';
-                document.body.style.overflow = 'auto';
+        // Beta Testine Katıl tıklandığında formu ilgili oyunun adıyla hazırla
+        const betaBtns = document.querySelectorAll('.modal-beta-join-btn');
+        const msgField = document.getElementById('contact-message');
+
+        betaBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const gameName = btn.getAttribute('data-game') || 'mobil oyununuzun';
+                closeModals();
+                if (msgField) {
+                    msgField.value = `Merhaba Muhammed, ${gameName} mobil oyununun kapalı beta testine katılmak istiyorum. Google Play e-posta adresim: `;
+                    msgField.focus();
+                }
+            });
+        });
+
+        // 3. Fotoğraf Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+        const zoomableImgs = document.querySelectorAll('.zoomable-img');
+
+        zoomableImgs.forEach(img => {
+            img.addEventListener('click', (e) => {
+                e.stopPropagation();
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+
+        if (lightboxClose) {
+            lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+        }
+        if (lightbox) {
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) lightbox.classList.remove('active');
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (lightbox && lightbox.classList.contains('active')) {
+                    lightbox.classList.remove('active');
+                } else {
+                    closeModals();
+                }
             }
         });
+
+        // 4. E-posta Kopyalama
+        const copyBtn = document.getElementById('copy-btn');
+        const bigEmail = document.getElementById('big-email');
+        const copyIcon = document.getElementById('copy-icon');
+        const copyText = document.getElementById('copy-text');
+
+        if (copyBtn && bigEmail) {
+            copyBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(bigEmail.innerText.trim()).then(() => {
+                    copyIcon.className = 'ri-check-line';
+                    copyText.innerText = 'Kopyalandı!';
+                    copyBtn.classList.add('copied');
+
+                    setTimeout(() => {
+                        copyIcon.className = 'ri-file-copy-line';
+                        copyText.innerText = 'Kopyala';
+                        copyBtn.classList.remove('copied');
+                    }, 2200);
+                });
+            });
+        }
+
+        // 5. İletişim Formu (AJAX)
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('form-submit-btn');
+        const feedback = document.getElementById('form-feedback');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<span>Gönderiliyor...</span> <i class="ri-loader-4-line ri-spin"></i>';
+
+                const formData = new FormData(contactForm);
+
+                try {
+                    const res = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    if (res.status === 200) {
+                        feedback.className = 'form-feedback success';
+                        feedback.innerText = 'Mesajınız başarıyla iletildi, teşekkürler!';
+                        contactForm.reset();
+                    } else {
+                        feedback.className = 'form-feedback error';
+                        feedback.innerText = 'Bir hata oluştu, lütfen doğrudan e-posta gönderin.';
+                    }
+                } catch {
+                    feedback.className = 'form-feedback error';
+                    feedback.innerText = 'Ağ bağlantısı hatası oluştu.';
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = '<span>Mesajı Gönder</span> <i class="ri-send-plane-fill"></i>';
+                }
+            });
+        }
     </script>
 </body>
 </html>

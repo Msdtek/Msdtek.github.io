@@ -1,0 +1,12 @@
+# Sensitive Keys & Secrets (Never commit)
+*.env*
+*key*
+*token*
+*secret*
+mcp_config.json
+
+# System & Temp
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
